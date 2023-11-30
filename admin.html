@@ -1,0 +1,141 @@
+<html>
+
+<body onload="update()">
+<style>
+    #card1{
+        background-color: #328f8a;
+        background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+        height: 80px;
+        border-radius: 20px;
+        border: 2px solid #000000;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        display: block;
+    }
+    #Edit{
+        margin-top: 10px;
+        padding: 10px;
+        background: #000000;
+        color: white;
+        width: 100px;
+    }
+    #nav{
+        padding: 10px;
+        background-color: #000000;
+        color: white;
+        border: none;
+        margin-top: 20px;
+        margin-left: 20px;
+        
+    }
+    #Profile{
+        display: none;
+        margin-top: 100px;
+        background-color: #328f8a;
+        background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+        height: 300px;
+        width: 300px;
+        border: 2px solid black;
+        font-size: larger;
+        font-family: 'Times New Roman', Times, serif;
+        
+    }
+    #Users{
+        display: none;
+    }
+    td{
+        padding: 10px;
+    }
+    .Nav{
+        background-color: #000000;
+        height: 80px;
+    }
+</style>
+<script>
+function Profile(){
+    document.getElementById('Users').style.display='none';
+    document.getElementById('Profile').style.display='block';
+    document.getElementById('Orders').style.display='none';
+    d
+}
+function Users(){
+    document.getElementById('Users').style.display='block';
+    document.getElementById('Profile').style.display='none';
+    document.getElementById('Orders').style.display='none';
+}
+function update(){
+var arrorder=[]
+var arruser=[]
+if(arrorder.length==0){
+    for(var i=0;i<10;i++){
+          arrorder[i]=i;
+    }
+    for(var i=0;i<10;i++){
+        
+        document.getElementById("card").innerHTML+='<div id="card1"><h1>Order '+arrorder[i]+'</h1></div>';
+        
+    }
+}
+if(arruser.length==0){
+    for(var i=0;i<10;i++){
+          arruser[i]=i;
+    }
+    for(var i=0;i<10;i++){
+        
+        document.getElementById("card2").innerHTML+='<div id="card1"><h1>User '+arruser[i]+'</h1></div>';
+        
+    }
+}
+
+}
+function order(){
+    
+    
+
+    document.getElementById('Users').style.display='none';
+    document.getElementById('Profile').style.display='none';
+    document.getElementById('Orders').style.display='block';
+    
+}
+</script>
+<div class="Nav">
+<button id="nav" onclick="order()">ORDERS</button>
+<button id="nav" onclick="Users()">USERS</button>
+<button id="nav"  onclick="Profile()">PROFILE</button>
+</div>
+
+<div id="Orders">
+<div id="card"></div>
+
+</div>
+<center>
+<div id="Profile">
+
+
+<h1>PROFILE</h1>
+<br>
+<table>
+<tr>
+    <td>NAME :</td>
+    <td>Senthil</td>
+</tr>
+
+<tr>
+    <td>EMAIL :</td>
+    <td>senthil@gmail.com</td>
+</tr>
+</table>
+<button id='Edit'>Edit</button>
+
+
+</div>
+
+<div id="Users">
+    <div id="card2"></div>
+
+</div>
+</div>
+</center>
+</body>
+</html>
